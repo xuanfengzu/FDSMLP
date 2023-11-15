@@ -5,6 +5,12 @@
 求解器可以输出具体的单纯形表解题步骤，做作业利器！
 
 ### 使用
+#### 0 库的安装
+直接pip
+```
+pip install FDSMLP -i https://pypi.org/project
+```
+
 #### 1 库的导入
 ```python
 from FDSMLP.Simplex import Two_step_simplex
@@ -253,4 +259,8 @@ max y = 1.0 * X1 + 3.0 * X2 - 1.0 * X3
  - 1.0 * X1 + 2.0 * X2 + 1.0 * X3 <= 4.0
  ...
  ```
+
+ ### 说明
+ 该项目目前不依赖第三方库，只依赖于python内置模块
+ 其实做的时候就后悔了，但是写都写了，懒得改了，反正大家也就拿来图一乐
 
