@@ -163,9 +163,7 @@ class Two_step_simplex(BasicSimplex):
             trans_dimension_lst = []
 
             for index in range(self.variable_nums-len(self.base_ind_artificial)):
-                print(index)
                 for row_index in self.b_in_base:
-                    print(self.A[self.base_ind.index(row_index)][index])
                     if abs(self.A[self.base_ind.index(row_index)][index]-0) > 1e-6:
                         delete = False
                         trans_dimension_lst.append(
@@ -246,6 +244,9 @@ class Two_step_simplex(BasicSimplex):
                     print(self.create_table())
                     result_x, result_y = self._get_result()
                     print(f'线性规划解得最优解为：{result_x},此时目标函数极大值为：{result_y}')
+
+            else:
+                print('该线性规划问题无最优解！')
 
     def _get_result(self):
         result_x = []

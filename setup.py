@@ -8,7 +8,7 @@ setuptools.setup(
     version='1.0.0',
     author='Micheal',
     author_email='853974517@qq.com',
-    description='这个库写着玩滴！可以做运筹作业',
+    description='这个库写着玩滴！可以做LP的作业',
     long_description=long_discription,
     long_description_content_type="text/markdown",
     url='',
