@@ -11,7 +11,7 @@ setuptools.setup(
     description='这个库写着玩滴！可以做LP的作业',
     long_description=long_discription,
     long_description_content_type="text/markdown",
-    url='',
+    url='https://github.com/xuanfengzu/FDSMLP',
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python ::3",

@@ -65,7 +65,7 @@ print(simplex)
 
 #### 4 求解
 ```python
-from Simplex import Two_step_simplex
+from FDSMLP.Simplex import Two_step_simplex
 
 A = [
     [0, 1, 2, 1, 0], 
@@ -225,4 +225,32 @@ max y = 2 * X1 + 3 * X2 + 6 * X3 + 3 * X4 + 1 * X5 - 0 * X6 - 0 * X7
 线性规划解得最优解为：[0, 1.3333333333333335, 1.3333333333333333, 0, -0.0],此时目标函数极大值为：2.666666666666667
 ```
 在实际终端中运行，每次转轴的变量都会标红显示
+
+#### 5 内置的parse_input函数使用
+```python
+from FDSMLP.core.utils.input_parser import parse_input
+from FDSMLP.Simplex import Two_step_simplex
+
+
+constrain,A,b,constraints=parse_input()
+
+simplex=Two_step_simplex(b,A,constrain,constraints)
+simplex.solve()
+```
+
+
+输出结果如下：
+```
+请输入目标函数的系数，用空格分隔: 1 3 -1
+请输入约束条件（例如 '1 2 <= 3'），输入 'end' 或直接回车结束输入: 1 1 2 <= 4
+请输入约束条件（例如 '1 2 <= 3'），输入 'end' 或直接回车结束输入: -1 2 1 <= 4
+请输入约束条件（例如 '1 2 <= 3'），输入 'end' 或直接回车结束输入: 
+开始执行两步法进行线性规划求解：
+原始目标函数为：
+max y = 1.0 * X1 + 3.0 * X2 - 1.0 * X3
+原始约束条件为：
+ 1.0 * X1 + 1.0 * X2 + 2.0 * X3 <= 4.0
+ - 1.0 * X1 + 2.0 * X2 + 1.0 * X3 <= 4.0
+ ...
+ ```
 
