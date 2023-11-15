@@ -5,9 +5,9 @@ with open('README.md','r',encoding='utf-8') as f:
 
 setuptools.setup(
     name='FDSMLP',
-    version='1.0.1',
+    version='1.0.2',
     author='Micheal',
-    description='这个库写着玩滴！可以做LP的作业',
+    description='可以打印单纯形表的LP求解器！',
     long_description=long_description,
     long_description_content_type="text/markdown",
     url='https://github.com/xuanfengzu/FDSMLP',

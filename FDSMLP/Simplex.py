@@ -1,8 +1,8 @@
 from copy import deepcopy
 
-from core.BasicSimplex import BasicSimplex
-from core.utils.Two_step_simplex_init import initialize_two_phase_simplex
-from core.utils.Normailze_simplex import convert_to_standard_form
+from .core.BasicSimplex import BasicSimplex
+from .core.utils.Two_step_simplex_init import initialize_two_phase_simplex
+from .core.utils.Normailze_simplex import convert_to_standard_form
 
 
 class Two_step_simplex(BasicSimplex):
