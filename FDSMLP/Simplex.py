@@ -43,9 +43,6 @@ class Two_step_simplex(BasicSimplex):
         status = self._solve_step_one()
         print(self.create_table())
         print(f'第一阶段算法执行完毕，得到如上结果，此时的检验数结果为：{self.b_copy}\n')
-        if status == 2:
-            print('在计算中发现仍有大于零的检验数，但其对应的的列数值均小于等于0，本题有无界解，求解结束！')
-            return
         self._solve_step_two()
 
     def __get_objective_func(self, b):
