@@ -5,7 +5,7 @@ with open('README.md','r',encoding='utf-8') as f:
 
 setuptools.setup(
     name='FDSMLP',
-    version='1.0.2',
+    version='1.0.3',
     author='Micheal',
     description='可以打印单纯形表的LP求解器！',
     long_description=long_description,
